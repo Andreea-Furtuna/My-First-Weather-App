@@ -11,66 +11,92 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-        <div class="weather-app">
-            <form class="search-form" id="search-form">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" id="city-input"
-                            class="form-control shadow-sm" />
-                    </div>
-                    <div class="col-3">
-                        <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm w-100" />
-                    </div>
-                    <div class="col-3">
-                        <button class="btn btn-success w-100" id="current-location-button">Current
-                        </button>
-                    </div>
-                </div>
-            </form>
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="row city-date">
+          <div class="col-6">
             <h1 id="city"></h1>
-            <div class="row">
-                <div class="col-6">
-                    <div class="clearfix">
-                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Cloudy icon"
-                            class="weather-icon float-left" />
-                        <br />
-                        <br />
-                        <br />
-                        <ul>
-                            <li id="date"></li>
-                            <li id="description"></li>
-                        </ul>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="clearfix">
-                                    <div class="float-left">
-                                        <span class="temperature" id="temperature"></span><span class="units">°C</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <ul>
-                                    <li class="humidity">Humidity: <span id="humidity"></span>%</li>
-                                    <li class="wind">Wind: <span id="wind"></span> km/h</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>
-                    <strong><em>Enjoy the weather no matter what! 🪂</em></strong>
-                </p>
+            <ul>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <header id="date"></header>
+          </div>
         </div>
-        </div>
-        <footer>
-            <a href="https://github.com/Andreea-Furtuna/My-First-Weather-App">Open-source code</a>
-            by Andreea Furtuna
-        </footer>
+        <div class="row temp-description">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+                class="weather-icon float-left"
+              />
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="units">°C</span>
+              </div>
+            </div>
+        
+            </div>
+            <div class="col-6 hum-wind">
+                <ul>
+                    <li>Feels like:<span id="feels"></span>°C</li>
+                  <li class="humidity">
+                    Humidity:<span id="humidity"></span>%
+                  </li>
+                  <li class="wind">Wind:<span id="wind"></span>km/h</li>
+                </ul>
+              </div>
+            </div>
+        <p>
+          <strong><em>Enjoy the weather no matter what! 🪂</em></strong>
+        </p>
+     
+    </div>
+    </div>
+</div>
+  </div>
+    </div>
+    <footer>
+      <a href="https://github.com/Andreea-Furtuna/My-First-Weather-App"
+        >Open-source code</a
+      >
+      by Andreea Furtuna
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
